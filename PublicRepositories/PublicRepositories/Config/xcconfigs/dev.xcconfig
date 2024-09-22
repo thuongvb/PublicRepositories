@@ -1,0 +1,17 @@
+//
+//  dev.xcconfig
+//  PublicRepositories
+//
+//  Created by Bùi Văn Thương on 9/22/24.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+APP_NAME = [DEV]Repos
+PRODUCT_BUNDLE_IDENTIFIER = com.thuongvb.repositories.dev
+APP_VERSION = 1.0.0
+APP_BUILD_VERSION = 1
+
+// API:
+API_ENDPOINT = https:\/\/api.github.com

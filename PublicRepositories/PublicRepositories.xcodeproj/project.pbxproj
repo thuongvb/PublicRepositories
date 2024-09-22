@@ -6,88 +6,63 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXContainerItemProxy section */
-		5B773A412C9DB2E400C0B6BC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B773A282C9DB2E200C0B6BC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5B773A2F2C9DB2E200C0B6BC;
-			remoteInfo = PublicRepositories;
-		};
-		5B773A4B2C9DB2E400C0B6BC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B773A282C9DB2E200C0B6BC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5B773A2F2C9DB2E200C0B6BC;
-			remoteInfo = PublicRepositories;
-		};
-/* End PBXContainerItemProxy section */
+/* Begin PBXBuildFile section */
+		5BE825032CA0300D00BE3D15 /* Logger in Frameworks */ = {isa = PBXBuildFile; productRef = 5BE825022CA0300D00BE3D15 /* Logger */; };
+		5BE825062CA0302200BE3D15 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5BE825052CA0302200BE3D15 /* Alamofire */; };
+		5BE8250B2CA0303700BE3D15 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 5BE8250A2CA0303700BE3D15 /* Factory */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B773A302C9DB2E200C0B6BC /* PublicRepositories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PublicRepositories.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B773A402C9DB2E400C0B6BC /* PublicRepositoriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PublicRepositoriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B773A4A2C9DB2E400C0B6BC /* PublicRepositoriesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PublicRepositoriesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BE824BA2CA02FB100BE3D15 /* PublicRepositories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PublicRepositories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5BE8250D2CA030B500BE3D15 /* Exceptions for "PublicRepositories" folder in "PublicRepositories" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 5BE824B92CA02FB100BE3D15 /* PublicRepositories */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		5B773A322C9DB2E200C0B6BC /* PublicRepositories */ = {
+		5BE824BC2CA02FB100BE3D15 /* PublicRepositories */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5BE8250D2CA030B500BE3D15 /* Exceptions for "PublicRepositories" folder in "PublicRepositories" target */,
+			);
 			path = PublicRepositories;
-			sourceTree = "<group>";
-		};
-		5B773A432C9DB2E400C0B6BC /* PublicRepositoriesTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PublicRepositoriesTests;
-			sourceTree = "<group>";
-		};
-		5B773A4D2C9DB2E400C0B6BC /* PublicRepositoriesUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PublicRepositoriesUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5B773A2D2C9DB2E200C0B6BC /* Frameworks */ = {
+		5BE824B72CA02FB100BE3D15 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5B773A3D2C9DB2E400C0B6BC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5B773A472C9DB2E400C0B6BC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				5BE825032CA0300D00BE3D15 /* Logger in Frameworks */,
+				5BE825062CA0302200BE3D15 /* Alamofire in Frameworks */,
+				5BE8250B2CA0303700BE3D15 /* Factory in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B773A272C9DB2E200C0B6BC = {
+		5BE824B12CA02FB100BE3D15 = {
 			isa = PBXGroup;
 			children = (
-				5B773A322C9DB2E200C0B6BC /* PublicRepositories */,
-				5B773A432C9DB2E400C0B6BC /* PublicRepositoriesTests */,
-				5B773A4D2C9DB2E400C0B6BC /* PublicRepositoriesUITests */,
-				5B773A312C9DB2E200C0B6BC /* Products */,
+				5BE824BC2CA02FB100BE3D15 /* PublicRepositories */,
+				5BE824BB2CA02FB100BE3D15 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		5B773A312C9DB2E200C0B6BC /* Products */ = {
+		5BE824BB2CA02FB100BE3D15 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B773A302C9DB2E200C0B6BC /* PublicRepositories.app */,
-				5B773A402C9DB2E400C0B6BC /* PublicRepositoriesTests.xctest */,
-				5B773A4A2C9DB2E400C0B6BC /* PublicRepositoriesUITests.xctest */,
+				5BE824BA2CA02FB100BE3D15 /* PublicRepositories.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,134 +70,72 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5B773A2F2C9DB2E200C0B6BC /* PublicRepositories */ = {
+		5BE824B92CA02FB100BE3D15 /* PublicRepositories */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B773A542C9DB2E400C0B6BC /* Build configuration list for PBXNativeTarget "PublicRepositories" */;
+			buildConfigurationList = 5BE824C82CA02FB200BE3D15 /* Build configuration list for PBXNativeTarget "PublicRepositories" */;
 			buildPhases = (
-				5B773A2C2C9DB2E200C0B6BC /* Sources */,
-				5B773A2D2C9DB2E200C0B6BC /* Frameworks */,
-				5B773A2E2C9DB2E200C0B6BC /* Resources */,
+				5BE824B62CA02FB100BE3D15 /* Sources */,
+				5BE824B72CA02FB100BE3D15 /* Frameworks */,
+				5BE824B82CA02FB100BE3D15 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				5B773A322C9DB2E200C0B6BC /* PublicRepositories */,
+				5BE824BC2CA02FB100BE3D15 /* PublicRepositories */,
 			);
 			name = PublicRepositories;
 			packageProductDependencies = (
+				5BE825022CA0300D00BE3D15 /* Logger */,
+				5BE825052CA0302200BE3D15 /* Alamofire */,
+				5BE8250A2CA0303700BE3D15 /* Factory */,
 			);
 			productName = PublicRepositories;
-			productReference = 5B773A302C9DB2E200C0B6BC /* PublicRepositories.app */;
+			productReference = 5BE824BA2CA02FB100BE3D15 /* PublicRepositories.app */;
 			productType = "com.apple.product-type.application";
-		};
-		5B773A3F2C9DB2E400C0B6BC /* PublicRepositoriesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5B773A572C9DB2E400C0B6BC /* Build configuration list for PBXNativeTarget "PublicRepositoriesTests" */;
-			buildPhases = (
-				5B773A3C2C9DB2E400C0B6BC /* Sources */,
-				5B773A3D2C9DB2E400C0B6BC /* Frameworks */,
-				5B773A3E2C9DB2E400C0B6BC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5B773A422C9DB2E400C0B6BC /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5B773A432C9DB2E400C0B6BC /* PublicRepositoriesTests */,
-			);
-			name = PublicRepositoriesTests;
-			packageProductDependencies = (
-			);
-			productName = PublicRepositoriesTests;
-			productReference = 5B773A402C9DB2E400C0B6BC /* PublicRepositoriesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		5B773A492C9DB2E400C0B6BC /* PublicRepositoriesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5B773A5A2C9DB2E400C0B6BC /* Build configuration list for PBXNativeTarget "PublicRepositoriesUITests" */;
-			buildPhases = (
-				5B773A462C9DB2E400C0B6BC /* Sources */,
-				5B773A472C9DB2E400C0B6BC /* Frameworks */,
-				5B773A482C9DB2E400C0B6BC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5B773A4C2C9DB2E400C0B6BC /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				5B773A4D2C9DB2E400C0B6BC /* PublicRepositoriesUITests */,
-			);
-			name = PublicRepositoriesUITests;
-			packageProductDependencies = (
-			);
-			productName = PublicRepositoriesUITests;
-			productReference = 5B773A4A2C9DB2E400C0B6BC /* PublicRepositoriesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5B773A282C9DB2E200C0B6BC /* Project object */ = {
+		5BE824B22CA02FB100BE3D15 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
-					5B773A2F2C9DB2E200C0B6BC = {
+					5BE824B92CA02FB100BE3D15 = {
 						CreatedOnToolsVersion = 16.0;
-					};
-					5B773A3F2C9DB2E400C0B6BC = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 5B773A2F2C9DB2E200C0B6BC;
-					};
-					5B773A492C9DB2E400C0B6BC = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 5B773A2F2C9DB2E200C0B6BC;
 					};
 				};
 			};
-			buildConfigurationList = 5B773A2B2C9DB2E200C0B6BC /* Build configuration list for PBXProject "PublicRepositories" */;
+			buildConfigurationList = 5BE824B52CA02FB100BE3D15 /* Build configuration list for PBXProject "PublicRepositories" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 5B773A272C9DB2E200C0B6BC;
+			mainGroup = 5BE824B12CA02FB100BE3D15;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5BE825012CA0300D00BE3D15 /* XCRemoteSwiftPackageReference "swift-logger" */,
+				5BE825042CA0302200BE3D15 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				5BE825092CA0303700BE3D15 /* XCRemoteSwiftPackageReference "Factory" */,
+			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 5B773A312C9DB2E200C0B6BC /* Products */;
+			productRefGroup = 5BE824BB2CA02FB100BE3D15 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5B773A2F2C9DB2E200C0B6BC /* PublicRepositories */,
-				5B773A3F2C9DB2E400C0B6BC /* PublicRepositoriesTests */,
-				5B773A492C9DB2E400C0B6BC /* PublicRepositoriesUITests */,
+				5BE824B92CA02FB100BE3D15 /* PublicRepositories */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5B773A2E2C9DB2E200C0B6BC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5B773A3E2C9DB2E400C0B6BC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5B773A482C9DB2E400C0B6BC /* Resources */ = {
+		5BE824B82CA02FB100BE3D15 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -232,21 +145,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5B773A2C2C9DB2E200C0B6BC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5B773A3C2C9DB2E400C0B6BC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5B773A462C9DB2E400C0B6BC /* Sources */ = {
+		5BE824B62CA02FB100BE3D15 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,21 +154,8 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		5B773A422C9DB2E400C0B6BC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5B773A2F2C9DB2E200C0B6BC /* PublicRepositories */;
-			targetProxy = 5B773A412C9DB2E400C0B6BC /* PBXContainerItemProxy */;
-		};
-		5B773A4C2C9DB2E400C0B6BC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5B773A2F2C9DB2E200C0B6BC /* PublicRepositories */;
-			targetProxy = 5B773A4B2C9DB2E400C0B6BC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		5B773A522C9DB2E400C0B6BC /* Debug */ = {
+		5BE824C62CA02FB200BE3D15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -332,7 +218,7 @@
 			};
 			name = Debug;
 		};
-		5B773A532C9DB2E400C0B6BC /* Release */ = {
+		5BE824C72CA02FB200BE3D15 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -388,17 +274,19 @@
 			};
 			name = Release;
 		};
-		5B773A552C9DB2E400C0B6BC /* Debug */ = {
+		5BE824C92CA02FB200BE3D15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 5BE824BC2CA02FB100BE3D15 /* PublicRepositories */;
+			baseConfigurationReferenceRelativePath = Config/xcconfigs/dev.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PublicRepositories/Preview Content\"";
 				DEVELOPMENT_TEAM = 79VVMB998J;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PublicRepositories/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -408,8 +296,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thuongvb.PublicRepositories;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -417,17 +303,19 @@
 			};
 			name = Debug;
 		};
-		5B773A562C9DB2E400C0B6BC /* Release */ = {
+		5BE824CA2CA02FB200BE3D15 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 5BE824BC2CA02FB100BE3D15 /* PublicRepositories */;
+			baseConfigurationReferenceRelativePath = Config/xcconfigs/prod.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PublicRepositories/Preview Content\"";
 				DEVELOPMENT_TEAM = 79VVMB998J;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = PublicRepositories/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -437,127 +325,80 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thuongvb.PublicRepositories;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		5B773A582C9DB2E400C0B6BC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 79VVMB998J;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thuongvb.PublicRepositoriesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PublicRepositories.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PublicRepositories";
-			};
-			name = Debug;
-		};
-		5B773A592C9DB2E400C0B6BC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 79VVMB998J;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thuongvb.PublicRepositoriesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PublicRepositories.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PublicRepositories";
-			};
-			name = Release;
-		};
-		5B773A5B2C9DB2E400C0B6BC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 79VVMB998J;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thuongvb.PublicRepositoriesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PublicRepositories;
-			};
-			name = Debug;
-		};
-		5B773A5C2C9DB2E400C0B6BC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 79VVMB998J;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thuongvb.PublicRepositoriesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PublicRepositories;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5B773A2B2C9DB2E200C0B6BC /* Build configuration list for PBXProject "PublicRepositories" */ = {
+		5BE824B52CA02FB100BE3D15 /* Build configuration list for PBXProject "PublicRepositories" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B773A522C9DB2E400C0B6BC /* Debug */,
-				5B773A532C9DB2E400C0B6BC /* Release */,
+				5BE824C62CA02FB200BE3D15 /* Debug */,
+				5BE824C72CA02FB200BE3D15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B773A542C9DB2E400C0B6BC /* Build configuration list for PBXNativeTarget "PublicRepositories" */ = {
+		5BE824C82CA02FB200BE3D15 /* Build configuration list for PBXNativeTarget "PublicRepositories" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5B773A552C9DB2E400C0B6BC /* Debug */,
-				5B773A562C9DB2E400C0B6BC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5B773A572C9DB2E400C0B6BC /* Build configuration list for PBXNativeTarget "PublicRepositoriesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5B773A582C9DB2E400C0B6BC /* Debug */,
-				5B773A592C9DB2E400C0B6BC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5B773A5A2C9DB2E400C0B6BC /* Build configuration list for PBXNativeTarget "PublicRepositoriesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5B773A5B2C9DB2E400C0B6BC /* Debug */,
-				5B773A5C2C9DB2E400C0B6BC /* Release */,
+				5BE824C92CA02FB200BE3D15 /* Debug */,
+				5BE824CA2CA02FB200BE3D15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5BE825012CA0300D00BE3D15 /* XCRemoteSwiftPackageReference "swift-logger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Qase/swift-logger.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		5BE825042CA0302200BE3D15 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		5BE825092CA0303700BE3D15 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5BE825022CA0300D00BE3D15 /* Logger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5BE825012CA0300D00BE3D15 /* XCRemoteSwiftPackageReference "swift-logger" */;
+			productName = Logger;
+		};
+		5BE825052CA0302200BE3D15 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5BE825042CA0302200BE3D15 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		5BE8250A2CA0303700BE3D15 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5BE825092CA0303700BE3D15 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 5B773A282C9DB2E200C0B6BC /* Project object */;
+	rootObject = 5BE824B22CA02FB100BE3D15 /* Project object */;
 }
