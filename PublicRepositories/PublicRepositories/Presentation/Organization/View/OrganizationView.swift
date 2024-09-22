@@ -16,6 +16,7 @@ struct OrganizationView: View {
         ZStack {
             ScrollView {
                 orgBannerView()
+                orgPopularReposView()
             }
         }
         .task {
@@ -30,8 +31,8 @@ struct OrganizationView: View {
             ForEach(viewModel.repositories, id: \.id) { repo in
                 repoInfoCardView(for: repo)
             }
-            
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
     
     @ViewBuilder
@@ -39,6 +40,17 @@ struct OrganizationView: View {
         VStack {
             HStack {
                 Text(repo.name)
+                
+                Text(repo.visibility.rawValue.capitalized)
+                    .font(.caption2)
+                    .fontWeight(.semibold)
+                    .padding(.vertical, 2)
+                    .padding(.horizontal, 8)
+                    .overlay(
+                        Capsule()
+                            .fill(Color.clear)
+                            .stroke(.gray.opacity(0.4))
+                    )
             }
         }
     }

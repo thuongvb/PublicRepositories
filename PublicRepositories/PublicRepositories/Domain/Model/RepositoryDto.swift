@@ -54,9 +54,9 @@ struct RepositoryDto: Codable, Hashable, Sendable {
     let labelsURL: String
     let releasesURL: String
     let deploymentsURL: String
-    let createdAt: Date
-    let updatedAt: Date
-    let pushedAt: Date
+    let createdAt: String
+    let updatedAt: String
+    let pushedAt: String
     let gitURL: String
     let sshURL: String
     let cloneURL: String
