@@ -12,9 +12,9 @@ class OrganizationViewModel: ObservableObject {
     @Injected(\.orgUseCase) var orgUseCase
     @Injected(\.localResourceUseCase) var localResourceUseCase
 
-    @Published var organization: OrganizationDto?
-    @Published var repositories: [RepositoryDto] = []
-    @Published var langColors: [String: Any] = [:]
+    @Published private(set) var organization: OrganizationDto?
+    @Published private(set) var repositories: [RepositoryDto] = []
+    @Published private(set) var langColors: [String: Any] = [:]
     @Published private(set) var page: Int = 0
     @Published private(set) var loadMorable: LoadMorableType = .loaded
     @Published private(set) var errors: [NSError] = []
@@ -65,6 +65,8 @@ class OrganizationViewModel: ObservableObject {
     }
 
     func refreshable() {
+        self.organization = nil
+        self.repositories = []
         self.page = 0
     }
 

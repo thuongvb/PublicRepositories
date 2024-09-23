@@ -243,7 +243,7 @@ extension OrganizationView {
                     .font(.callout)
                     .fontWeight(.semibold)
                     .foregroundStyle(Color.blue)
-                    .shimmering(active: isLoading)
+                    .shimmering()
 
                 Spacer(minLength: 8)
 
@@ -257,20 +257,19 @@ extension OrganizationView {
                             .fill(Color.clear)
                             .stroke(.gray.opacity(0.4))
                     )
-                    .shimmering(active: isLoading)
+                    .shimmering()
             }
 
             Text("Repository description")
                 .font(.caption)
                 .foregroundStyle(Color.gray)
-                .shimmering(active: isLoading)
+                .shimmering()
 
             HStack {
                 Text("Repository more infomation.")
             }
             .font(.caption)
-            .shimmering(active: isLoading)
-
+            .shimmering()
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
@@ -328,7 +327,7 @@ extension OrganizationView {
     func bottomListView() -> some View {
         switch viewModel.loadMorable {
         case .loading:
-            ProgressView()
+            emptyCardView()
         case .noMoreData:
             Text("NO_MORE_DATA".localized)
                 .font(.callout)
