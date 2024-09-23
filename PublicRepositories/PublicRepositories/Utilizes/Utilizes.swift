@@ -7,6 +7,12 @@
 
 import Foundation
 
+enum LoadMorableType: Int, Hashable {
+    case loaded
+    case loading
+    case noMoreData
+}
+
 func infoForKey(_ key: String) -> String {
     return (Bundle.main.infoDictionary?[key] as? String)?
         .replacingOccurrences(of: "\\", with: "") ?? ""

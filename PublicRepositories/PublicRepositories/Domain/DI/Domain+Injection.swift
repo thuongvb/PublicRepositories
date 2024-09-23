@@ -11,4 +11,8 @@ extension Container {
     var orgUseCase: Factory<OrganizationUseCaseType> {
         Factory(self) { OrganizationUseCase() }
     }
+
+    var localResourceUseCase: Factory<LocalResourceUseCaseType> {
+        Factory(self) { LocalResourceUseCase() }
+    }
 }

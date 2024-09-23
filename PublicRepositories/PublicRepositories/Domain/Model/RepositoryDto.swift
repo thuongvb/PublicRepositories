@@ -13,7 +13,6 @@ struct RepositoryDto: Codable, Hashable, Sendable {
     let name: String
     let fullName: String
     let repositoryDtoPrivate: Bool
-    let owner: Owner
     let htmlURL: String
     let description: String?
     let fork: Bool
@@ -77,17 +76,15 @@ struct RepositoryDto: Codable, Hashable, Sendable {
     let archived: Bool
     let disabled: Bool
     let openIssuesCount: Int
-    let license: License?
     let allowForking: Bool
     let isTemplate: Bool
     let webCommitSignoffRequired: Bool
     let topics: [String]
-    let visibility: Visibility
+    let visibility: String
     let forks: Int
     let openIssues: Int
     let watchers: Int
-    let defaultBranch: DefaultBranch
-    let permissions: Permissions
+    let defaultBranch: String?
 
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -95,7 +92,6 @@ struct RepositoryDto: Codable, Hashable, Sendable {
         case name = "name"
         case fullName = "full_name"
         case repositoryDtoPrivate = "private"
-        case owner = "owner"
         case htmlURL = "html_url"
         case description = "description"
         case fork = "fork"
@@ -159,7 +155,6 @@ struct RepositoryDto: Codable, Hashable, Sendable {
         case archived = "archived"
         case disabled = "disabled"
         case openIssuesCount = "open_issues_count"
-        case license = "license"
         case allowForking = "allow_forking"
         case isTemplate = "is_template"
         case webCommitSignoffRequired = "web_commit_signoff_required"
@@ -169,144 +164,17 @@ struct RepositoryDto: Codable, Hashable, Sendable {
         case openIssues = "open_issues"
         case watchers = "watchers"
         case defaultBranch = "default_branch"
-        case permissions = "permissions"
     }
 }
 
-enum DefaultBranch: String, Codable, Hashable, Sendable {
-    case devtoolsApp = "devtoolsApp"
-    case master = "master"
-}
-
-// MARK: - License
-struct License: Codable, Hashable, Sendable {
-    let key: Key
-    let name: Name
-    let spdxID: SpdxID
-    let url: String?
-    let nodeID: LicenseNodeID
-
-    enum CodingKeys: String, CodingKey {
-        case key = "key"
-        case name = "name"
-        case spdxID = "spdx_id"
-        case url = "url"
-        case nodeID = "node_id"
+extension RepositoryDto {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
-}
 
-enum Key: String, Codable, Hashable, Sendable {
-    case apache20 = "apache-2.0"
-    case bsd3Clause = "bsd-3-clause"
-    case other = "other"
-}
-
-enum Name: String, Codable, Hashable, Sendable {
-    case apacheLicense20 = "Apache License 2.0"
-    case bsd3ClauseNewOrRevisedLicense = "BSD 3-Clause \"New\" or \"Revised\" License"
-    case other = "Other"
-}
-
-enum LicenseNodeID: String, Codable, Hashable, Sendable {
-    case mDc6TGljZW5ZZTA = "MDc6TGljZW5zZTA="
-    case mDc6TGljZW5ZZTI = "MDc6TGljZW5zZTI="
-    case mDc6TGljZW5ZZTU = "MDc6TGljZW5zZTU="
-}
-
-enum SpdxID: String, Codable, Hashable, Sendable {
-    case apache20 = "Apache-2.0"
-    case bsd3Clause = "BSD-3-Clause"
-    case noassertion = "NOASSERTION"
-}
-
-// MARK: - Owner
-struct Owner: Codable, Hashable, Sendable {
-    let login: Login
-    let id: Int
-    let nodeID: OwnerNodeID
-    let avatarURL: String
-    let gravatarID: String
-    let url: String
-    let htmlURL: String
-    let followersURL: String
-    let followingURL: FollowingURL
-    let gistsURL: GistsURL
-    let starredURL: StarredURL
-    let subscriptionsURL: String
-    let organizationsURL: String
-    let reposURL: String
-    let eventsURL: EventsURL
-    let receivedEventsURL: String
-    let type: TypeEnum
-    let siteAdmin: Bool
-
-    enum CodingKeys: String, CodingKey {
-        case login = "login"
-        case id = "id"
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url = "url"
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type = "type"
-        case siteAdmin = "site_admin"
+    static func == (lhs: RepositoryDto, rhs: RepositoryDto) -> Bool {
+        lhs.id == rhs.id
     }
+
 }
 
-enum EventsURL: String, Codable, Hashable, Sendable {
-    case httpsAPIGithubCOMUsersGoogleEventsPrivacy = "https://api.github.com/users/google/events{/privacy}"
-}
-
-enum FollowingURL: String, Codable, Hashable, Sendable {
-    case httpsAPIGithubCOMUsersGoogleFollowingOtherUser = "https://api.github.com/users/google/following{/other_user}"
-}
-
-enum GistsURL: String, Codable, Hashable, Sendable {
-    case httpsAPIGithubCOMUsersGoogleGistsGistID = "https://api.github.com/users/google/gists{/gist_id}"
-}
-
-enum Login: String, Codable, Hashable, Sendable {
-    case google = "google"
-}
-
-enum OwnerNodeID: String, Codable, Hashable, Sendable {
-    case mdEyOk9YZ2FuaXphdGlvbjEzNDIwMDQ = "MDEyOk9yZ2FuaXphdGlvbjEzNDIwMDQ="
-}
-
-enum StarredURL: String, Codable, Hashable, Sendable {
-    case httpsAPIGithubCOMUsersGoogleStarredOwnerRepo = "https://api.github.com/users/google/starred{/owner}{/repo}"
-}
-
-enum TypeEnum: String, Codable, Hashable, Sendable {
-    case organization = "Organization"
-}
-
-// MARK: - Permissions
-struct Permissions: Codable, Hashable, Sendable {
-    let admin: Bool
-    let maintain: Bool
-    let push: Bool
-    let triage: Bool
-    let pull: Bool
-
-    enum CodingKeys: String, CodingKey {
-        case admin = "admin"
-        case maintain = "maintain"
-        case push = "push"
-        case triage = "triage"
-        case pull = "pull"
-    }
-}
-
-enum Visibility: String, Codable, Hashable, Sendable {
-    case visibilityPublic = "public"
-}

@@ -11,7 +11,7 @@ import Alamofire
 class APIService {
     static let shared = APIService()
     
-    func request<T: Codable>(_ url: APIService.Urls) async -> T? {
+    func request<T: Codable>(_ url: APIService.Urls) async throws -> T? {
         do {
             let request = AF.request(
                 url.urlString,
@@ -30,11 +30,11 @@ class APIService {
             
         } catch {
             handleResponseError(error)
-            return nil
+            throw error
         }
     }
     
-    func request<T: Codable>(_ url: APIService.Urls) async -> [T] {
+    func request<T: Codable>(_ url: APIService.Urls) async throws -> [T] {
         do {
             let request = AF.request(
                 url.urlString,
@@ -53,7 +53,7 @@ class APIService {
             
         } catch {
             handleResponseError(error)
-            return []
+            throw error
         }
     }
     

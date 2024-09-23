@@ -11,4 +11,8 @@ extension Container {
     var organizationRepository: Factory<OrganizationRepository> {
         Factory(self) { OrganizationRepositoryImpl() }
     }
+    
+    var localResourceRepository: Factory<LocalResourceRepository> {
+        Factory(self) { LocalResourceRepositoryImpl() }
+    }
 }

@@ -8,6 +8,6 @@
 import Foundation
  
 protocol OrganizationRepository {
-    func fetchOrganization(name: String) async -> OrganizationDto?
-    func fetchOrganizationRepos(name: String, page: Int, perPage: Int) async -> [RepositoryDto]
+    func fetchOrganization(name: String) async throws -> OrganizationDto?
+    func fetchOrganizationRepos(name: String, page: Int, perPage: Int) async throws -> [RepositoryDto]
 }
