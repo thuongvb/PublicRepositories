@@ -12,8 +12,19 @@
 		5BE8250B2CA0303700BE3D15 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 5BE8250A2CA0303700BE3D15 /* Factory */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5BE825892CA1C62500BE3D15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BE824B22CA02FB100BE3D15 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BE824B92CA02FB100BE3D15;
+			remoteInfo = PublicRepositories;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		5BE824BA2CA02FB100BE3D15 /* PublicRepositories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PublicRepositories.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BE825852CA1C62500BE3D15 /* PublicRepositoriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PublicRepositoriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -35,6 +46,11 @@
 			path = PublicRepositories;
 			sourceTree = "<group>";
 		};
+		5BE825862CA1C62500BE3D15 /* PublicRepositoriesTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PublicRepositoriesTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +64,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5BE825822CA1C62500BE3D15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				5BE824BC2CA02FB100BE3D15 /* PublicRepositories */,
+				5BE825862CA1C62500BE3D15 /* PublicRepositoriesTests */,
 				5BE824BB2CA02FB100BE3D15 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				5BE824BA2CA02FB100BE3D15 /* PublicRepositories.app */,
+				5BE825852CA1C62500BE3D15 /* PublicRepositoriesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +120,29 @@
 			productReference = 5BE824BA2CA02FB100BE3D15 /* PublicRepositories.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5BE825842CA1C62500BE3D15 /* PublicRepositoriesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BE8258B2CA1C62500BE3D15 /* Build configuration list for PBXNativeTarget "PublicRepositoriesTests" */;
+			buildPhases = (
+				5BE825812CA1C62500BE3D15 /* Sources */,
+				5BE825822CA1C62500BE3D15 /* Frameworks */,
+				5BE825832CA1C62500BE3D15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BE8258A2CA1C62500BE3D15 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				5BE825862CA1C62500BE3D15 /* PublicRepositoriesTests */,
+			);
+			name = PublicRepositoriesTests;
+			packageProductDependencies = (
+			);
+			productName = PublicRepositoriesTests;
+			productReference = 5BE825852CA1C62500BE3D15 /* PublicRepositoriesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -107,6 +155,10 @@
 				TargetAttributes = {
 					5BE824B92CA02FB100BE3D15 = {
 						CreatedOnToolsVersion = 16.0;
+					};
+					5BE825842CA1C62500BE3D15 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 5BE824B92CA02FB100BE3D15;
 					};
 				};
 			};
@@ -130,12 +182,20 @@
 			projectRoot = "";
 			targets = (
 				5BE824B92CA02FB100BE3D15 /* PublicRepositories */,
+				5BE825842CA1C62500BE3D15 /* PublicRepositoriesTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5BE824B82CA02FB100BE3D15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BE825832CA1C62500BE3D15 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -152,7 +212,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5BE825812CA1C62500BE3D15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BE8258A2CA1C62500BE3D15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BE824B92CA02FB100BE3D15 /* PublicRepositories */;
+			targetProxy = 5BE825892CA1C62500BE3D15 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5BE824C62CA02FB200BE3D15 /* Debug */ = {
@@ -336,6 +411,42 @@
 			};
 			name = Release;
 		};
+		5BE8258C2CA1C62500BE3D15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79VVMB998J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thuongvb.publicRepositories.PublicRepositoriesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PublicRepositories.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PublicRepositories";
+			};
+			name = Debug;
+		};
+		5BE8258D2CA1C62500BE3D15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79VVMB998J;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thuongvb.publicRepositories.PublicRepositoriesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PublicRepositories.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PublicRepositories";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -353,6 +464,15 @@
 			buildConfigurations = (
 				5BE824C92CA02FB200BE3D15 /* Debug */,
 				5BE824CA2CA02FB200BE3D15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BE8258B2CA1C62500BE3D15 /* Build configuration list for PBXNativeTarget "PublicRepositoriesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BE8258C2CA1C62500BE3D15 /* Debug */,
+				5BE8258D2CA1C62500BE3D15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
