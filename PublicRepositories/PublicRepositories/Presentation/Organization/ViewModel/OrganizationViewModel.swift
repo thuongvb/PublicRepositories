@@ -83,4 +83,10 @@ class OrganizationViewModel: ObservableObject {
 
         await fetchOrganizationRepos(with: name)
     }
+    
+    func dropAndHandleError() {
+        let error = errors.removeFirst()
+        Logging.error(error)
+    }
+
 }

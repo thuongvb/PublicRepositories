@@ -19,6 +19,20 @@ struct OrganizationView: View {
         )
     }
     
+    var shouldShowAlert: Binding<Bool> {
+        Binding(
+            get: {
+                !viewModel.errors.isEmpty
+                && viewModel.errors.first != nil
+            },
+            set: { newValue in
+                if !newValue, !viewModel.errors.isEmpty {
+                    viewModel.dropAndHandleError()
+                }
+            }
+        )
+    }
+    
     let name: String
     
     var body: some View {
@@ -50,6 +64,18 @@ struct OrganizationView: View {
             }
             await viewModel.loadmorable(with: name)
         }
+        .alert(
+            "WANR_ALERT_TITLE".localized,
+            isPresented: shouldShowAlert,
+            actions: {
+                Button("OK".localized) {
+                    // Handle the acknowledgement.
+                }
+            },
+            message: {
+                Text(viewModel.errors.first?.localizedDescription ?? "Something is wrong.".localized)
+            }
+        )
     }
 }
 
@@ -65,7 +91,7 @@ extension OrganizationView {
         .padding()
     }
     
-
+    
     @ViewBuilder
     func infoView() -> some View {
         // - followers
@@ -82,12 +108,12 @@ extension OrganizationView {
             Text(viewModel.organization?.name ?? "")
                 .font(.headline)
                 .shimmering(active: isLoading)
-
+            
             Text(viewModel.organization?.description ?? "")
                 .font(.caption)
                 .foregroundStyle(Color.gray)
                 .shimmering(active: isLoading)
-
+            
             HStack {
                 Image(systemName: "person.2")
                     .font(.caption2)
@@ -98,19 +124,19 @@ extension OrganizationView {
                     .font(.caption2)
             }
             .shimmering(active: isLoading)
-
+            
             HStack {
                 Image(.locationMarkIcon)
                     .renderingMode(.template)
                     .font(.caption2)
                     .fontWeight(.semibold)
                     .foregroundStyle(colorScheme == .dark ? Color.white : Color.black)
-
+                
                 Text(location)
                     .font(.caption2)
             }
             .shimmering(active: isLoading)
-
+            
             HStack {
                 Image(systemName: "link")
                     .resizable()
@@ -159,7 +185,7 @@ extension OrganizationView {
                     .font(.callout)
                     .fontWeight(.semibold)
                     .frame(maxWidth: .infinity, alignment: .leading)
-
+                
                 if viewModel.repositories.isEmpty {
                     emptyCardView()
                 } else {
@@ -175,7 +201,7 @@ extension OrganizationView {
                         }
                     }
                 }
-
+                
                 bottomListView()
             }
             .padding(.horizontal, 8)
@@ -192,9 +218,9 @@ extension OrganizationView {
                     .font(.callout)
                     .fontWeight(.semibold)
                     .foregroundStyle(Color.blue)
-
+                
                 Spacer(minLength: 8)
-
+                
                 Text(repo.visibility.capitalized)
                     .font(.caption2)
                     .fontWeight(.semibold)
@@ -206,20 +232,20 @@ extension OrganizationView {
                             .stroke(.gray.opacity(0.4))
                     )
             }
-
+            
             if let description = repo.description {
                 Text(description)
                     .font(.caption)
                     .foregroundStyle(Color.gray)
             }
-
+            
             HStack {
                 if let language = repo.language {
                     languageView(language: language)
                 }
-
+                
                 stargazersView(stargazersCount: repo.stargazersCount)
-
+                
                 forksView(forksCount: repo.forksCount)
             }
             .font(.caption)
@@ -244,9 +270,9 @@ extension OrganizationView {
                     .fontWeight(.semibold)
                     .foregroundStyle(Color.blue)
                     .shimmering()
-
+                
                 Spacer(minLength: 8)
-
+                
                 Text("Public")
                     .font(.caption2)
                     .fontWeight(.semibold)
@@ -259,12 +285,12 @@ extension OrganizationView {
                     )
                     .shimmering()
             }
-
+            
             Text("Repository description")
                 .font(.caption)
                 .foregroundStyle(Color.gray)
                 .shimmering()
-
+            
             HStack {
                 Text("Repository more infomation.")
             }
@@ -280,8 +306,8 @@ extension OrganizationView {
                 .stroke(.gray.opacity(0.2))
         )
     }
-
-
+    
+    
     @ViewBuilder
     func languageView(language: String) -> some View {
         HStack {
@@ -290,11 +316,11 @@ extension OrganizationView {
                     .frame(width: 12, height: 12)
                     .clipShape(.circle)
             }
-
+            
             Text(language)
         }
     }
-
+    
     @ViewBuilder
     func stargazersView(stargazersCount: Int) -> some View {
         HStack {
@@ -303,11 +329,11 @@ extension OrganizationView {
                 .frame(width: 12, height: 12)
                 .font(.caption2)
                 .fontWeight(.bold)
-
+            
             Text(stargazersCount.shorted())
         }
     }
-
+    
     @ViewBuilder
     func forksView(forksCount: Int) -> some View {
         HStack {
@@ -318,11 +344,11 @@ extension OrganizationView {
                 .font(.caption2)
                 .fontWeight(.semibold)
                 .foregroundStyle(colorScheme == .dark ? Color.white : Color.black)
-
+            
             Text(forksCount.shorted())
         }
     }
-
+    
     @ViewBuilder
     func bottomListView() -> some View {
         switch viewModel.loadMorable {
@@ -336,7 +362,7 @@ extension OrganizationView {
             EmptyView()
         }
     }
-
+    
     func repoCardOnAppearHandler(repo: RepositoryDto) {
         let isLast = repo.id == viewModel.repositories.last?.id
         lastItemAppeared = isLast ? repo.id : nil

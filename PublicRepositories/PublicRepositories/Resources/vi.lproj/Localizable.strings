@@ -8,3 +8,6 @@
 // - Organization
 "POPULAR_REPOS" = "Kho lưu trữ phổ biến";
 "NO_MORE_DATA" = "Dữ liệu đã hết";
+
+// - Alert -
+"WANR_ALERT_TITLE" = "Cảnh báo!";
